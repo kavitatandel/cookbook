@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import About from "./component/About";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
       {/* ABOUT */}
       <h1>ABOUT COMPONENT</h1>
+      <About/>
 
       {/* FOOTER */}
       <h3>FOOTER COMPONENT</h3>
