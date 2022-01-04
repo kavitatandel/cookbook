@@ -24,7 +24,7 @@ function App() {
 
       {/* RECIPE PAGE */}
       <h1>RECIPE COMPONENT (example):</h1>
-      <RecipeDesc />
+      <RecipeDesc id={1} />
 
       {/* ABOUT */}
       <h1>ABOUT COMPONENT</h1>
