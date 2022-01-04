@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1235" height="650" viewBox="0 0 7410 3900">
 <rect width="7410" height="3900" fill="#b22234"/>
@@ -23,4 +24,5 @@
 <use xlink:href="#s9" x="1976"/>
 <use xlink:href="#s5" x="2470"/>
 </g>
+
 </svg>

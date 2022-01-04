@@ -1,7 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
+
+import RecipeDesc from "./component/RecipeDesc";
+
 import Header from "./component/Header";
 import Country from "./component/Country";
+
 
 function App() {
   return (
@@ -20,6 +24,7 @@ function App() {
 
       {/* RECIPE PAGE */}
       <h1>RECIPE COMPONENT (example):</h1>
+      <RecipeDesc />
 
       {/* ABOUT */}
       <h1>ABOUT COMPONENT</h1>
