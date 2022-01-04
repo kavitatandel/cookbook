@@ -67,6 +67,7 @@ p {
   font-weight: 400;
 }
 
+/*not using in styled-component*/
 .recipeDescRecipeTitleStarter td {
   padding: 5px;
   text-align: center;
@@ -77,6 +78,7 @@ p {
   height: 50px;
 }
 
+/*for starter image*/
 .recipeDescCountryImageStarter img {
   width: 450px;
   height: 310px;
