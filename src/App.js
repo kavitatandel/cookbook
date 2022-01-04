@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
       {/* HEADER */}
-      <h2>HEADER COMPONENT</h2>
       <Header />
 
       {/* HOME */}
@@ -30,7 +29,7 @@ function App() {
       <h1>ABOUT COMPONENT</h1>
 
       {/* FOOTER */}
-      <h3>FOOTER COMPONENT</h3>
+      <h1>FOOTER COMPONENT</h1>
     </div>
   );
 }
