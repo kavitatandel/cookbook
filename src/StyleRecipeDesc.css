@@ -1,0 +1,194 @@
+/* COUNTRY FOODS STYLES : START */
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+h1,
+h4,
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+.mainDivRecipeDescStarter {
+  width: 100%;
+  margin: 50px auto 0px auto;
+}
+
+.recipeDescImageAndTitleStarter {
+  width: 80%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.recipeDescCountryImageStarter {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10%;
+}
+
+.recipeDescRecipeTitleStarter {
+  display: inline-block;
+  /* width:40%; commented at 6 pm   */
+  width: 100%;
+  vertical-align: middle;
+  margin-left: 10%;
+}
+
+.tableFlageAndTitle {
+  /* width:40%;  commented at 6 pm  */
+  width: auto;
+  display: inline-block;
+}
+
+.imgCountry {
+  display: inline-block;
+  text-align: left;
+}
+
+.countryName {
+  display: inline-block;
+  text-align: left;
+}
+
+.countryName h5 {
+  padding: 0px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.recipeDescRecipeTitleStarter td {
+  padding: 5px;
+  text-align: center;
+}
+
+.recipeDescIndiaFlagStarter {
+  width: 50px;
+  height: 50px;
+}
+
+.recipeDescCountryImageStarter img {
+  width: 450px;
+  height: 310px;
+}
+
+.recipeType h4 {
+  text-align: left;
+  color: orange;
+  opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.recipeName {
+  color: black;
+  opacity: 1;
+  letter-spacing: 5px;
+}
+
+.recipeName h1 {
+  font-size: 5rem;
+  padding-left: 0px;
+  margin-left: 0px;
+  text-align: left;
+  margin-block-start: 0px;
+}
+
+.shareBasic {
+  width: auto;
+  color: orange;
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.shareBasic .social {
+  width: auto;
+  display: inline-block;
+}
+
+.shareBasic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 3px;
+  color: inherit;
+  background-color: white;
+}
+
+.shareBasic .social > a:hover {
+  opacity: 0.7;
+}
+
+.social label {
+  display: inline-block;
+  color: orange;
+  vertical-align: middle;
+  padding-left: 6px;
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+}
+
+.gridContainerRecipeDesc {
+  width: 80%;
+  display: grid;
+  grid-column-gap: 0px;
+  row-gap: 0px;
+  /* minmax(0, 1fr)- track's flex factor. here it takes
+     remaining portion of the track when overflow the content     */
+  grid-template-columns: auto minmax(0, 1fr);
+  background-color: white;
+  justify-content: center;
+  margin-left: 10%;
+  margin-bottom: 50px;
+}
+
+.gridItem {
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgba(117, 116, 114, 0.8);
+  padding: 20px;
+  margin: 0px 0px;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+}
+
+.gridContainerRecipeDesc .mainCol {
+  background-color: rgba(241, 201, 22, 0.5);
+}
+
+.tableIngredients {
+  width: 100%;
+}
+
+.tableIngredients td {
+  padding: 0px 30px 0px 0px;
+}
+
+.mainGridMethod {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.method {
+  padding-bottom: 0px;
+}

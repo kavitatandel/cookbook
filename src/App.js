@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import RecipeDesc from "./component/RecipeDesc";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
       {/* RECIPE PAGE */}
       <h1>RECIPE COMPONENT (example):</h1>
+      <RecipeDesc />
 
       {/* ABOUT */}
       <h1>ABOUT COMPONENT</h1>
