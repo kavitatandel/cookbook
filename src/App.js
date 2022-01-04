@@ -6,6 +6,7 @@ import RecipeDesc from "./component/RecipeDesc";
 
 import Header from "./component/Header";
 import Country from "./component/Country";
+import About from "./component/About"
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
 
       {/* ABOUT */}
       <h1>ABOUT COMPONENT</h1>
-      <About/>
+      {/* <About/> */}
 
       {/* FOOTER */}
       <h1>FOOTER COMPONENT</h1>
