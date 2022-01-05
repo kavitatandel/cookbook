@@ -88,7 +88,7 @@ const Home = () => {
 
                         <LinkHomeFlag href="CountryFoodUK.html" > <Embed src={UKFlag} />UK</LinkHomeFlag>
 
-                        <LinkHomeFlag href="CountryFoodPoland.html" > <Embed src={UKFlag} />Poland</LinkHomeFlag>
+                        <LinkHomeFlag href="CountryFoodPoland.html" > <Embed src={PolandFlag} />Poland</LinkHomeFlag>
 
                         <LinkHomeFlag href="CountryFoodUSA.html" > <Embed src={USAFlag} />USA</LinkHomeFlag>
                     </DivHomeFlag>

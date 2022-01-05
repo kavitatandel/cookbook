@@ -1,17 +1,21 @@
 import logo from "../Images/Logo.png";
 import styled from "styled-components";
+import {Route, Routes, Link} from 'react-router-dom';
 
 export default function Header() {
+
+  
   return (
     <>
       <TopHeader>
         <Nav>
-          <Logo src={logo} />
-          <A href="#">India</A>
-          <A href="#">UK</A>
-          <A href="#">Poland</A>
-          <A href="#">USA</A>
-          <A href="#">About</A>
+
+          <Link to="/" ><Logo src={logo} /></Link>
+          <Link to="/india" >India</Link>
+          <Link to="/uk">UK</Link>
+          <Link to="/poland">Poland</Link>
+          <Link to="/usa">USA</Link>
+          <Link to="/about">About</Link>
         </Nav>
       </TopHeader>
     </>
