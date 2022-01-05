@@ -1,7 +1,8 @@
-import '../StyleRecipeDesc.css'
+//import '../StyleRecipeDesc.css'
 import IndiaFlag from '../Images/IndiaFlag.jpg'
 import StarterPoha from '../Images/StarterPoha.jpg'
 import styled from 'styled-components';
+import ShareRecipe from './ShareRecipe'
 
 const DivTitle = styled.div`
 width: 80%;
@@ -107,7 +108,7 @@ const RecipeDescTitle = () => {
                             <TdCountryInfo>
                                 <ImgCountryFlag src={IndiaFlag} alt="Country Flag" />
                             </TdCountryInfo>
-                            <TdCountryInfo>
+                            <TdCountryInfo style={{ textAlign: 'left' }}>
                                 <H5CountryName>India</H5CountryName>
                             </TdCountryInfo>
                         </TrCountryInfo>
@@ -123,17 +124,7 @@ const RecipeDescTitle = () => {
                         </TrCountryInfo>
                         <TrCountryInfo>
                             <TdCountryInfo colspan="2">
-                                <div className="shareBasic">
-                                    <div className="social">
-                                        <a href="#" name="instagram" id="linkInsta">
-                                            <i className="icon ion-social-instagram"></i></a><a href="#" name="snapchat"
-                                                id="linkSnapchat"><i className="icon ion-social-snapchat"></i></a><a href="#"
-                                                    name="twitter" id="linkTwitter"><i className="icon ion-social-twitter"></i></a><a
-                                                        href="#" name="facebook" id="linkFacebook"><i
-                                                            className="icon ion-social-facebook"></i></a><label name="lblShareRecipe">Share
-                                        </label>
-                                    </div>
-                                </div>
+                                <ShareRecipe />
                             </TdCountryInfo>
                         </TrCountryInfo>
                     </TableFlageAndTitle>
