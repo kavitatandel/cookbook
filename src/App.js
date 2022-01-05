@@ -6,7 +6,12 @@ import RecipeDesc from "./component/RecipeDesc";
 
 import Header from "./component/Header";
 import Country from "./component/Country";
+
+import Home from './component/Home';
+
+
 import About from "./component/About"
+
 
 
 function App() {
@@ -17,6 +22,7 @@ function App() {
 
       {/* HOME */}
       <h1>HOME COMPONENT</h1>
+      <Home />
 
       {/* COUNTRY PAGE */}
       <h1>COUNTRY COMPONENT (example):</h1>
