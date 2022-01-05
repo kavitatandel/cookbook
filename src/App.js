@@ -1,11 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Footer from "./component/Footer";
 
 import RecipeDesc from "./component/RecipeDesc";
 
 import Header from "./component/Header";
 import Country from "./component/Country";
+
 import Home from './component/Home';
+
+
+import About from "./component/About"
 
 
 
@@ -13,7 +18,6 @@ function App() {
   return (
     <div className="App">
       {/* HEADER */}
-      <h2>HEADER COMPONENT</h2>
       <Header />
 
       {/* HOME */}
@@ -31,9 +35,11 @@ function App() {
 
       {/* ABOUT */}
       <h1>ABOUT COMPONENT</h1>
+      {/* <About/> */}
+      <About />
 
-      {/* FOOTER */}
-      <h3>FOOTER COMPONENT</h3>
+      <h1>FOOTER COMPONENT</h1>
+      <Footer />
     </div>
   );
 }
