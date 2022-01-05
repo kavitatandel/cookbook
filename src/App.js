@@ -30,9 +30,10 @@ function App() {
       {/* ABOUT */}
       <h1>ABOUT COMPONENT</h1>
       {/* <About/> */}
+      <About />
 
-      {/* FOOTER */}
       <h1>FOOTER COMPONENT</h1>
+      <Footer />
     </div>
   );
 }
