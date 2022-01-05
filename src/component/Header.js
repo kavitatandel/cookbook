@@ -1,6 +1,6 @@
 import logo from "../Images/Logo.png";
 import styled from "styled-components";
-import {Route, Routes, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default function Header() {
 
@@ -9,7 +9,6 @@ export default function Header() {
     <>
       <TopHeader>
         <Nav>
-
           <Link to="/" ><Logo src={logo} /></Link>
           <Link to="/india" >India</Link>
           <Link to="/uk">UK</Link>

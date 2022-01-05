@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import {Link} from 'react-router-dom';
 
 const Card = (props) => {
   return (
     <>
     <CardDesign>
-      <CardTH>{props.foodType}</CardTH>
+      <CardHeader>{props.foodType}</CardHeader>
       <CardContent>
       <CardImg></CardImg>
       <H3>title</H3>
@@ -24,7 +25,7 @@ box-shadow: 0 0 3px rgba(0,0,0,.5);
 `
 
 
-const CardTH = styled.div`
+const CardHeader = styled.div`
   background-color: orange;
   font-size: 1.8rem;
   letter-spacing: 2px;

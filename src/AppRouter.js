@@ -3,6 +3,8 @@ import Header from './component/Header'
 import Country from './component/Country'
 import Home from './component/Home'
 import About from './component/About'
+import Footer from "./component/Footer";
+import RecipeDesc from './component/RecipeDesc';
 
 const AppRouter =  () => {
 	return(
@@ -15,8 +17,8 @@ const AppRouter =  () => {
 <Route path="poland" element={<Country />} />
 <Route path="usa" element={<Country />} />
 <Route path="about" element={<About />} />
-
 </Routes>
+<Footer />
 
 </>
 	)

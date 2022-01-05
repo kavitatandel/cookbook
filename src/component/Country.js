@@ -2,6 +2,7 @@ import styled from "styled-components";
 import USflag from "../Images/USAFlag.png";
 import Card from "./Card";
 
+
 export default function Country() {
   return (
     <CountryComponent>
