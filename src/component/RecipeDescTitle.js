@@ -47,25 +47,19 @@ padding: 0px 0px;
 text-transform: uppercase;
 font-weight: 600;
 text-align:left;
+padding:15px 0px 0px 10px;
 `;
-
-// const TdImgCountry = styled.td`
-// display: inline-block;
-// text-align: left;
-// `;
 
 const TrCountryInfo = styled.tr`
 text-align:left;
 `;
 
 const TdCountryInfo = styled.td`
+display:flex;
 text-align:left;
 `;
 
-
-//this if for image size of the food
-//currently not working
-const ImageFood = styled.image` 
+const ImageFood = styled.img` 
 width: 450px;
 height: 310px;
 `;
@@ -103,34 +97,31 @@ const RecipeDescTitle = () => {
             <DivTitle>
                 <DivTitleInner>
                     <TableFlageAndTitle>
-                        {/* <tr style={{ textAlign: 'left' }}> */}
                         <TrCountryInfo>
                             <TdCountryInfo>
                                 <ImgCountryFlag src={IndiaFlag} alt="Country Flag" />
-                            </TdCountryInfo>
-                            <TdCountryInfo style={{ textAlign: 'left' }}>
                                 <H5CountryName>India</H5CountryName>
                             </TdCountryInfo>
                         </TrCountryInfo>
                         <TrCountryInfo>
-                            <TdCountryInfo colspan="2">
+                            <TdCountryInfo>
                                 <H4RecipeType>Starter</H4RecipeType>
                             </TdCountryInfo>
                         </TrCountryInfo>
                         <TrCountryInfo>
-                            <TdCountryInfo colspan="2">
+                            <TdCountryInfo>
                                 <H1RecipeName>Poha</H1RecipeName>
                             </TdCountryInfo>
                         </TrCountryInfo>
                         <TrCountryInfo>
-                            <TdCountryInfo colspan="2">
+                            <TdCountryInfo>
                                 <ShareRecipe />
                             </TdCountryInfo>
                         </TrCountryInfo>
                     </TableFlageAndTitle>
                 </DivTitleInner>
                 <DivImageRecipe>
-                    <img src={StarterPoha} alt="India Flag" />
+                    <ImageFood src={StarterPoha} alt="Food Photo" />
                 </DivImageRecipe>
             </DivTitle>
         </>
