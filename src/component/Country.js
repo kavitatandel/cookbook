@@ -1,16 +1,19 @@
 import styled from "styled-components";
-import USflag from "../Images/USAFlag.png";
 import Card from "./Card";
 
-export default function Country() {
+export default function Country({flag, CountryName}) {
+
+
   return (
     <CountryComponent>
       <CountryHeader>
-        <Flag src={USflag}></Flag>
-        <H1>Country Name</H1>
+        <Flag src={flag} alt="flag"/>
+        <H1>{CountryName}</H1>
       </CountryHeader>
       <CountryMain>
-        <Card foodType="starters" />
+
+        {/* country.recipes.map  */}
+        <Card foodType="starters"/>
         <Card foodType="main" />
         <Card foodType="dessert" />
       </CountryMain>

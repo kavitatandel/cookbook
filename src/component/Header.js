@@ -16,7 +16,7 @@ export default function Header() {
           <Link to="/poland">Poland</Link>
           <Link to="/usa">USA</Link>
           <Link to="/about">About</Link>
-        </Nav>
+        </Nav> 
       </TopHeader>
     </>
   );
