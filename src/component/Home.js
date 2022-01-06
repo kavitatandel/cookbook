@@ -2,7 +2,8 @@ import styled from 'styled-components';
 //import IndiaFlag from '../Images/india.svg';
 import USAFlag from '../Images/united-states.svg';
 import UKFlag from '../Images/united-kingdom.svg';
-import PolandFlag from '../Images/poland.svg';
+// import PolandFlag from '../Images/poland.svg';
+//import PolandFlag from '../Images/Poland.jpg';
 import BackgroundImage from '../Images/home-background.png'
 
 //background-image: url("Images/home-background.png");
@@ -75,27 +76,27 @@ border-radius: 50%;
 
 
 const Home = () => {
-    return (
-        <>
-            <Main >
-                <Container style={{ backgroundImage: { BackgroundImage } }}>
+  return (
+    <>
+      <Main >
+        <Container style={{ backgroundImage: { BackgroundImage } }}>
 
-                    <Header>Discover the World of Spicy Food!</Header>
+          <Header>Discover the World of Spicy Food!</Header>
 
-                    <SubHeader>Select a country to get started:</SubHeader>
-                    <DivHomeFlag>
-                        <LinkHomeFlag href="CountryFoodIndia.html" > <Embed src={UKFlag} />India</LinkHomeFlag>
+          <SubHeader>Select a country to get started:</SubHeader>
+          <DivHomeFlag>
+            <LinkHomeFlag href="CountryFoodIndia.html" > <Embed src={UKFlag} />India</LinkHomeFlag>
 
-                        <LinkHomeFlag href="CountryFoodUK.html" > <Embed src={UKFlag} />UK</LinkHomeFlag>
+            <LinkHomeFlag href="CountryFoodUK.html" > <Embed src={UKFlag} />UK</LinkHomeFlag>
 
-                        <LinkHomeFlag href="CountryFoodPoland.html" > <Embed src={PolandFlag} />Poland</LinkHomeFlag>
+            <LinkHomeFlag href="CountryFoodPoland.html" > <Embed src={USAFlag} />Poland</LinkHomeFlag>
 
-                        <LinkHomeFlag href="CountryFoodUSA.html" > <Embed src={USAFlag} />USA</LinkHomeFlag>
-                    </DivHomeFlag>
-                </Container>
-            </Main>
-        </>
-    )
+            <LinkHomeFlag href="CountryFoodUSA.html" > <Embed src={USAFlag} />USA</LinkHomeFlag>
+          </DivHomeFlag>
+        </Container>
+      </Main>
+    </>
+  )
 }
 
 export default Home;
