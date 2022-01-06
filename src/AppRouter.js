@@ -23,7 +23,7 @@ const AppRouter = () => {
 				<Route path="poland" element={<Country flag={PolandFlag} CountryName="Poland" />} />
 				<Route path="usa" element={<Country flag={USAFlag} CountryName="USA" />} />
 				<Route path="about" element={<About />} />
-				<Route path="recipedesc/1" element={<RecipeDesc />} />
+				<Route path="recipedesc/:recipeId" element={<RecipeDesc />} />
 			</Routes>
 			<Footer />
 
