@@ -20,9 +20,13 @@ const RecipeDesc = () => {
     const [recipe, setRecipe] = useState([]);
 
     const fetchRecipeById = () => {
-        Client.getEntries({ 'metadata.tags.sys.Id[all]': '1' })
+        Client.getEntries()
+            //Client.getEntry('2j4ISUOZOxa7vDMYIP7Dhf')
             .then(response => {
-                console.log(response.items);
+                console.log(response.items[0].fields.countryName[0])
+                // console.log(response.items[0].sys.id)
+                // console.log(response.fields.countryName[0]);
+                // console.log(response.fields.title)
             })
             .catch(error => console.log(error));
     }
