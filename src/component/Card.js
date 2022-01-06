@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 const Card = (props) => {
   return (
     <>
-    <CardDesign>
-      <CardHeader>{props.foodType}</CardHeader>
-      <CardContent>
-      <CardImg></CardImg>
-      <CardH3>{props.title}</CardH3>
-      <CardP> {props.description}</CardP>
-      <Link to={`/recipedesc/1`}><CardA>Go to recipe »</CardA></Link>
-      </CardContent>
+      <CardDesign>
+        <CardHeader>{props.foodType}</CardHeader>
+        <CardContent>
+          <CardImg></CardImg>
+          <CardH3>{props.title}</CardH3>
+          <CardP> {props.description}</CardP>
+          <Link to={`/recipedesc/2j4ISUOZOxa7vDMYIP7Dhf`}><CardA>Go to recipe »</CardA></Link>
+        </CardContent>
       </CardDesign>
     </>
   );
@@ -56,7 +56,7 @@ const CardImg = styled.img`
 
 `
 
-const CardH3 = styled.h3 `
+const CardH3 = styled.h3`
   color: black;
   font-weight: 700;
   margin: 0px;
