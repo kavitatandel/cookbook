@@ -10,7 +10,8 @@ const Card = (props) => {
           <CardImg></CardImg>
           <CardH3>{props.title}</CardH3>
           <CardP> {props.description}</CardP>
-          <Link to={`/recipedesc/2j4ISUOZOxa7vDMYIP7Dhf`}><CardA>Go to recipe »</CardA></Link>
+          {/* <Link to={`/recipedesc/2j4ISUOZOxa7vDMYIP7Dhf`}><CardA>Go to recipe »</CardA></Link> */}
+          <Link to={`/recipedesc/${props.sysId}`}><CardA>Go to recipe »</CardA></Link>
         </CardContent>
       </CardDesign>
     </>
