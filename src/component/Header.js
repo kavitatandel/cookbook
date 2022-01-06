@@ -11,11 +11,11 @@ export default function Header() {
         <Nav>
 
           <Link to="/" ><Logo src={logo} /></Link>
-          <Link to="/india" >India</Link>
-          <Link to="/uk">UK</Link>
-          <Link to="/poland">Poland</Link>
-          <Link to="/usa">USA</Link>
-          <Link to="/about">About</Link>
+          <Link to="/india" style={{textDecoration: "none"}}><A>India</A></Link>
+          <Link to="/uk" style={{textDecoration: "none"}}><A>UK</A></Link>
+          <Link to="/poland" style={{textDecoration: "none"}}><A>Poland</A></Link>
+          <Link to="/usa" style={{textDecoration: "none"}}><A>USA</A></Link>
+          <Link to="/about" style={{textDecoration: "none"}}><A>About</A></Link>
         </Nav> 
       </TopHeader>
     </>
@@ -29,6 +29,7 @@ const TopHeader = styled.header`
   justify-content: center;
   align-items: center;
   border-bottom: 7px solid orange;
+  padding: 5px;
 `;
 
 const Nav = styled.nav`
@@ -41,11 +42,11 @@ const Nav = styled.nav`
   font-size: 1.4rem;
 `;
 
-const A = styled.a`
+const A = styled.p`
   color: white;
-  text-decoration: none;
   &:hover {
     color: orange;
+    text-decoration-color: none;
   }
 `;
 
