@@ -8,9 +8,9 @@ const Card = (props) => {
       <CardHeader>{props.foodType}</CardHeader>
       <CardContent>
       <CardImg></CardImg>
-      <CardH3>title</CardH3>
-      <CardP>description text description text description text description text description text </CardP>
-      <Link to={`/recipedesc/1`}>Go to recipe</Link>
+      <CardH3>Recipe Title</CardH3>
+      <CardP> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quasi facilis dicta, consectetur in animi.</CardP>
+      <Link to={`/recipedesc/1`}><CardA>Go to recipe »</CardA></Link>
       </CardContent>
       </CardDesign>
     </>
@@ -29,15 +29,19 @@ const CardHeader = styled.div`
   font-size: 1.8rem;
   letter-spacing: 2px;
   padding: 5px;
+  // padding-left: 15px;
   color: black;
   font-variant: small-caps;
   height: 40px;
   textTransform: uppercase;
-  font-weight: 200;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const CardContent = styled.div`
-padding: 20px;
+padding: 22px;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -48,6 +52,7 @@ const CardImg = styled.img`
   width: 200px;
   height: 150px;
   background-color: grey;
+  margin-bottom: 10px;
 
 `
 
@@ -55,13 +60,17 @@ const CardH3 = styled.h3 `
   color: black;
   font-weight: 700;
   margin: 0px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: left;
+  margin-bottom: 8px;
 
 `
 
 const CardP = styled.p`
   color: black;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+
 `
 const CardA = styled.a`
 color: blue;
