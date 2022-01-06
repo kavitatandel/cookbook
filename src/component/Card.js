@@ -8,8 +8,8 @@ const Card = (props) => {
       <CardHeader>{props.foodType}</CardHeader>
       <CardContent>
       <CardImg></CardImg>
-      <CardH3>Recipe Title</CardH3>
-      <CardP> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quasi facilis dicta, consectetur in animi.</CardP>
+      <CardH3>{props.title}</CardH3>
+      <CardP> {props.description}</CardP>
       <Link to={`/recipedesc/1`}><CardA>Go to recipe »</CardA></Link>
       </CardContent>
       </CardDesign>
