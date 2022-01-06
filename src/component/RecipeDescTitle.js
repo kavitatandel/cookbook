@@ -1,8 +1,11 @@
 //import '../StyleRecipeDesc.css'
-import IndiaFlag from '../Images/IndiaFlag.jpg'
+import IndiaFlag from '../Images/IndiaFlag.png'
 import StarterPoha from '../Images/StarterPoha.jpg'
 import styled from 'styled-components';
 import ShareRecipe from './ShareRecipe'
+import UKFlag from '../Images/UKFlag.png'
+import USAFlag from '../Images/USAFlag.png'
+import PolandFlag from '../Images/PolandFlag.png'
 
 const DivTitle = styled.div`
 width: 80%;
@@ -71,6 +74,7 @@ opacity: 1;
 text-transform: uppercase;
 letter-spacing: 3px;
 font-weight: 900;
+padding-top:10px;
 `;
 
 const TdRecipeName = styled.td`
@@ -91,7 +95,10 @@ letter-spacing:5px;
 `;
 
 
-const RecipeDescTitle = () => {
+const RecipeDescTitle = ({ recipeInfo }) => {
+    // console.log("inside Title");
+    // console.log(recipeInfo);
+    // console.log(recipeInfo.fields.title);
     return (
         <>
             <DivTitle>
@@ -99,18 +106,25 @@ const RecipeDescTitle = () => {
                     <TableFlageAndTitle>
                         <TrCountryInfo>
                             <TdCountryInfo>
-                                <ImgCountryFlag src={IndiaFlag} alt="Country Flag" />
-                                <H5CountryName>India</H5CountryName>
+                                <ImgCountryFlag src={recipeInfo.fields.countryName[0] === 'India'
+                                    ? IndiaFlag
+                                    : recipeInfo.fields.countryName[0] === 'UK'
+                                        ? UKFlag
+                                        : recipeInfo.fields.countryName[0] === 'USA'
+                                            ? USAFlag : PolandFlag
+                                } alt="Country Flag" />
+                                <H5CountryName>{recipeInfo.fields.countryName[0]}</H5CountryName>
+                                {/* <H5CountryName>India</H5CountryName> */}
                             </TdCountryInfo>
                         </TrCountryInfo>
                         <TrCountryInfo>
                             <TdCountryInfo>
-                                <H4RecipeType>Starter</H4RecipeType>
+                                <H4RecipeType>{recipeInfo.fields.foodType[0]}</H4RecipeType>
                             </TdCountryInfo>
                         </TrCountryInfo>
                         <TrCountryInfo>
                             <TdCountryInfo>
-                                <H1RecipeName>Poha</H1RecipeName>
+                                <H1RecipeName>{recipeInfo.fields.title}</H1RecipeName>
                             </TdCountryInfo>
                         </TrCountryInfo>
                         <TrCountryInfo>
@@ -121,7 +135,7 @@ const RecipeDescTitle = () => {
                     </TableFlageAndTitle>
                 </DivTitleInner>
                 <DivImageRecipe>
-                    <ImageFood src={StarterPoha} alt="Food Photo" />
+                    <ImageFood src={recipeInfo.fields.image.fields.file.url} alt={recipeInfo.fields.image.fields.title} />
                 </DivImageRecipe>
             </DivTitle>
         </>

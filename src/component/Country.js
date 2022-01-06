@@ -1,67 +1,67 @@
 import styled from "styled-components";
 import Card from "./Card";
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Client } from './Client';
 
-export default function Country({flag, CountryName}) {
+export default function Country({ flag, CountryName }) {
 
   const [allData, setAllData] = useState([]);
 
-	let space_id = "muz2113dk9y2";
-	let access_token = "ng3MtA1yc1sXOmljgbbr-Ge7AmxrVZKtDwYu-ywRpes";
-	let environment_id = "master";
-	let content_type_id = "muz2113dk9y2";
+  let space_id = "muz2113dk9y2";
+  let access_token = "ng3MtA1yc1sXOmljgbbr-Ge7AmxrVZKtDwYu-ywRpes";
+  let environment_id = "master";
+  let content_type_id = "muz2113dk9y2";
 
-    const fetchData = () => {
-		Client.getEntries(`/spaces/${space_id}/environments/${environment_id}/content_types/${content_type_id}?access_token=${access_token}`)
-		.then((contentType) => setAllData(contentType.items))
-		.catch(console.error)
-    }
+  const fetchData = () => {
+    Client.getEntries(`/spaces/${space_id}/environments/${environment_id}/content_types/${content_type_id}?access_token=${access_token}`)
+      .then((contentType) => setAllData(contentType.items))
+      .catch(console.error)
+  }
 
-    useEffect(() => {
-        fetchData();
-    }, [] )
+  useEffect(() => {
+    fetchData();
+  }, [])
 
-    // console.log(allData[0].fields.countryName[0]);
-//  allData.filter(e => (e.fields.title==='Roasted Squash with Thyme')).map(e => {console.log(e)})
-//  const filtered=allData.filter(e => {
-//    return e.fields.CountryName[0] === "UK"
-//  }
-  
-//   );
+  // console.log(allData[0].fields.countryName[0]);
+  //  allData.filter(e => (e.fields.title==='Roasted Squash with Thyme')).map(e => {console.log(e)})
+  //  const filtered=allData.filter(e => {
+  //    return e.fields.CountryName[0] === "UK"
+  //  }
 
-//  console.log(filtered);
+  //   );
 
-// console.log(allData[0].fields.countryName[0])
+  //  console.log(filtered);
 
-// console.log(CountryName)
+  // console.log(allData[0].fields.countryName[0])
+
+  // console.log(CountryName)
 
   return (
     <CountryComponent>
       <CountryHeader>
-        <Flag src={flag} alt="flag"/>
+        <Flag src={flag} alt="flag" />
         <H1>{CountryName}</H1>
       </CountryHeader>]
-      
-    
+
+
       <CountryMain>
-      {allData
-      // .filter(e=>e.fields.countryName[0] === "India")
-            
-      .filter(e=>e.fields.title === "Roasted Squash with Thyme")
+        {allData
+          // .filter(e=>e.fields.countryName[0] === "India")
 
-      .map(e => {
+          .filter(e => e.fields.title === "Roasted Squash with Thyme")
 
-          return (
+          .map(e => {
 
-            <>
-            
-            <Card id={e.fields.id} foodType={e.fields.foodType} title={e.fields.title} description={e.fields.description} countryName={CountryName}/>
+            return (
 
-            </>
-          )
-        })}
+              <>
+
+                <Card id={e.fields.id} sysId={e.sys.id} foodType={e.fields.foodType} title={e.fields.title} description={e.fields.description} countryName={CountryName} />
+
+              </>
+            )
+          })}
 
         {/* <Card foodType="starters"/>
         <Card foodType="main" />

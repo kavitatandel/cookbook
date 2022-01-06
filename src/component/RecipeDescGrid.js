@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+//import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 /* minmax(0, 1fr)- track's flex factor. here it takes
 remaining portion of the track when overflow the content     */
@@ -39,10 +42,14 @@ background-color: rgba(241, 201, 22, 0.5);
 
 const TableIngredients = styled.table`
 width: 100%;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 1em;
+font-weight:normal;
 `;
 
 const TdTableIngredients = styled.td`
 padding: 5px 30px 5px 0px;
+
 `;
 
 const DivMainGridMethod = styled.div`
@@ -64,8 +71,36 @@ padding-top:5px;
 padding-bottom:5px;
 `;
 
+//for rendering rich-text.Not working
+const options = {
+    renderMark: {
+        [MARKS.BOLD]: (text) => `<custom-bold>${text}<custom-bold>`,
+    },
+    renderNode: {
+        [BLOCKS.PARAGRAPH]: (node, next) =>
+            `<custom-paragraph>${next(node.content)}</custom-paragraph>`,
+    },
+    [BLOCKS.LIST_ITEM]: (node, next) =>
+        `<custom-listitem>${next(node.content)}</custom-listitem>`,
+}
 
-const RecipeDescGrid = () => {
+// const Bold = ({ children }) => <span className="bold">{children}</span>;
+// const Text = ({ children }) => <p className="align-center">{children}</p>;
+// const option = {
+//     renderMark: {
+//         [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+//     },
+//     renderNode: {
+//         [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+//     }
+// };
+
+const RecipeDescGrid = ({ recipeMethod }) => {
+
+
+    console.log("inside Recipe Grid")
+    //console.log(documentToHtmlString(recipeMethod.fields.method, options));
+
     return (
         <>
             <GridContainer>
@@ -73,7 +108,7 @@ const RecipeDescGrid = () => {
                     <h4>Description</h4>
                 </GridItemMainCol>
                 <GridItem>
-                    <p>This is a Breakfast item from India. It is made of rice flakes along with other indian spices.</p>
+                    <p>{recipeMethod.fields.description}</p>
                 </GridItem>
                 <GridItemMainCol>
                     <h4>Ingredients</h4>
@@ -81,54 +116,16 @@ const RecipeDescGrid = () => {
                 <GridItem>
                     <div>
                         <TableIngredients>
-                            <tr>
-                                <TdTableIngredients>
-                                    <p>Poha(rice-flakes): </p>
-                                </TdTableIngredients>
-                                <TdTableIngredients>
-                                    <p>1 cup</p>
-                                </TdTableIngredients>
-                            </tr>
-                            <tr>
-                                <TdTableIngredients>
-                                    <p>Potatoes:</p>
-                                </TdTableIngredients>
-                                <TdTableIngredients>
-                                    <p> 1 small (cut into small pieces)</p>
-                                </TdTableIngredients>
-                            </tr>
-                            <tr>
-                                <TdTableIngredients>
-                                    <p>Onion: </p>
-                                </TdTableIngredients>
-                                <TdTableIngredients>
-                                    <p>1 small (cut into small pieces)</p>
-                                </TdTableIngredients>
-                            </tr>
-                            <tr>
-                                <TdTableIngredients>
-                                    <p>Kadi Patta: </p>
-                                </TdTableIngredients>
-                                <TdTableIngredients>
-                                    <p>4-5 nos.</p>
-                                </TdTableIngredients>
-                            </tr>
-                            <tr>
-                                <TdTableIngredients>
-                                    <p>Mustard seeds: </p>
-                                </TdTableIngredients>
-                                <TdTableIngredients>
-                                    <p>1/2 tsp </p>
-                                </TdTableIngredients>
-                            </tr>
-                            <tr>
-                                <TdTableIngredients>
-                                    <p>Green Chillies: </p>
-                                </TdTableIngredients>
-                                <TdTableIngredients>
-                                    <p>1-2 (cut into large pieces)</p>
-                                </TdTableIngredients>
-                            </tr>
+                            {recipeMethod.fields.ingredients.map((ingredient, index) => {
+                                return (
+
+                                    <tr key={index}>
+                                        <TdTableIngredients>{ingredient.name}</TdTableIngredients>
+                                        <TdTableIngredients>{ingredient.quantity}</TdTableIngredients>
+                                    </tr>
+
+                                )
+                            })}
 
                         </TableIngredients>
                     </div>
@@ -138,6 +135,9 @@ const RecipeDescGrid = () => {
                 </GridItemMainCol>
                 <DivMainGridMethod>
                     <div>
+                        <DivMethod>
+                            {documentToHtmlString(recipeMethod.fields.method)}
+                        </DivMethod>
                         <DivMethod>
                             <p>1. Add 2 cups of water into rice flakes, slightly wash them and drain the water immediately.
                                 Repeat this process twice.</p>
