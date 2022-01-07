@@ -114,52 +114,32 @@ const RecipeDescGrid = ({ recipeMethod }) => {
                     <h4>Ingredients</h4>
                 </GridItemMainCol>
                 <GridItem>
-                    <div>
-                        <TableIngredients>
-                            {recipeMethod.fields.ingredients.map((ingredient, index) => {
-                                return (
+                    {/* <div> */}
+                    <TableIngredients>
+                        {recipeMethod.fields.ingredients.map((ingredient, index) => {
+                            return (
 
-                                    <tr key={index}>
-                                        <TdTableIngredients>{ingredient.name}</TdTableIngredients>
-                                        <TdTableIngredients>{ingredient.quantity}</TdTableIngredients>
-                                    </tr>
+                                <tr key={index}>
+                                    <TdTableIngredients>{ingredient.name}</TdTableIngredients>
+                                    <TdTableIngredients>{ingredient.quantity}</TdTableIngredients>
+                                </tr>
 
-                                )
-                            })}
+                            )
+                        })}
 
-                        </TableIngredients>
-                    </div>
+                    </TableIngredients>
+                    {/* </div> */}
                 </GridItem>
                 <GridItemMainCol>
                     <h4>Method</h4>
                 </GridItemMainCol>
                 <DivMainGridMethod>
-                    <div>
-                        <DivMethod>
-                            {documentToHtmlString(recipeMethod.fields.method)}
-                        </DivMethod>
-                        <DivMethod>
-                            <p>1. Add 2 cups of water into rice flakes, slightly wash them and drain the water immediately.
-                                Repeat this process twice.</p>
-                        </DivMethod>
-                        <DivMethod>
-                            <p>2. Add oil in a pan and heat it. Now add mustard seeds, kadi patta, green chillies,peanuts
-                                and fry for 30 seonds.</p>
-                        </DivMethod>
-                        <DivMethod>
-                            <p>3. Add onion and fry for 2 mins on medium flame. Now add potatoes and cook till its done.</p>
-                        </DivMethod>
-                        <DivMethod>
-                            <p>4. Meanwhile add turemeric powder, salt, lemon juice, sugar into washed rice flakes and mixed
-                                everything very well. </p>
-                        </DivMethod>
-                        <DivMethod>
-                            <p>5. Add rice flakes into cooked potatoes and mixed well.</p>
-                        </DivMethod>
-                        <DivMethod>
-                            <p>6. Garnish with coriander leaves.</p>
-                        </DivMethod>
-                    </div>
+                    {/* <div> */}
+                    <DivMethod>
+                        {documentToHtmlString(recipeMethod.fields.method)}
+                    </DivMethod>
+
+                    {/* </div> */}
                 </DivMainGridMethod>
             </GridContainer>
         </>

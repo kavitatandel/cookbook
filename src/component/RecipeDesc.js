@@ -15,13 +15,16 @@ const RecipeDesc = () => {
 
     const { recipeId } = useParams();
     const [recipe, setRecipe] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
-    const fetchRecipeById = () => {
+    const fetchRecipeById = async () => {
         console.log(recipeId)
-        Client.getEntry(recipeId)
+        await Client.getEntry(recipeId)
             .then(response => {
                 console.log(response)
                 setRecipe(response)
+                setLoading(false)
             })
             .catch(error => console.log(error));
     }
@@ -30,6 +33,8 @@ const RecipeDesc = () => {
         fetchRecipeById();
     }, [])
 
+    if (loading) return <h1>Page is loading</h1>
+    if (error) return <h1>There is an error occured. Please try again later....</h1>
     return (
         <>
             <DivMain>
