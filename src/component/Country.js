@@ -42,31 +42,29 @@ export default function Country({ flag, CountryName }) {
       <CountryHeader>
         <Flag src={flag} alt="flag" />
         <H1>{CountryName}</H1>
-      </CountryHeader>]
+      </CountryHeader>
+
+
 
 
       <CountryMain>
         {allData
-          // .filter(e=>e.fields.countryName[0] === "India")
+          // .filter(e=>e.fields.countryName[0] == CountryName)
 
-          .filter(e => e.fields.title === "Roasted Squash with Thyme")
+          // .filter(e => e.fields.title === "Roasted Squash with Thyme")
 
           .map(e => {
-
             return (
-
               <>
-
-                <Card id={e.fields.id} sysId={e.sys.id} foodType={e.fields.foodType} title={e.fields.title} description={e.fields.description} countryName={CountryName} />
-
+                <Card id={e.fields.id} sysId={e.sys.id} foodType={e.fields.foodType} title={e.fields.title} description={e.fields.description} countryName={CountryName} image={e.fields.image.fields.file.url}/>
               </>
             )
           })}
 
-        {/* <Card foodType="starters"/>
-        <Card foodType="main" />
-        <Card foodType="dessert" /> */}
       </CountryMain>
+)
+
+
     </CountryComponent>
   );
 }
