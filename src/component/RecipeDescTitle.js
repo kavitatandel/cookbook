@@ -7,6 +7,7 @@ import UKFlag from '../Images/UKFlag.png'
 import USAFlag from '../Images/USAFlag.png'
 import PolandFlag from '../Images/PolandFlag.png'
 
+
 const DivTitle = styled.div`
 width: 80%;
 width: auto;
@@ -96,9 +97,7 @@ letter-spacing:5px;
 
 
 const RecipeDescTitle = ({ recipeInfo }) => {
-    // console.log("inside Title");
-    // console.log(recipeInfo);
-    // console.log(recipeInfo.fields.title);
+
     return (
         <>
             <DivTitle>

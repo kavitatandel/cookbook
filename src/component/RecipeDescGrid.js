@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-//import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 
 /* minmax(0, 1fr)- track's flex factor. here it takes
 remaining portion of the track when overflow the content     */
@@ -72,38 +70,8 @@ padding-top:5px;
 padding-bottom:5px;
 `;
 
-//for rendering rich-text.Not working
-const options = {
-    renderMark: {
-        [MARKS.BOLD]: (text) => `<custom-bold>${text}<custom-bold>`,
-    },
-    renderNode: {
-        [BLOCKS.PARAGRAPH]: (node, next) =>
-            `<custom-paragraph>${next(node.content)}</custom-paragraph>`,
-    },
-    [BLOCKS.LIST_ITEM]: (node, next) =>
-        `<custom-listitem>${next(node.content)}</custom-listitem>`,
-}
-
-// const Bold = ({ children }) => <span className="bold">{children}</span>;
-// const Text = ({ children }) => <p className="align-center">{children}</p>;
-// const option = {
-//     renderMark: {
-//         [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
-//     },
-//     renderNode: {
-//         [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-//     }
-// };
-
-
 
 const RecipeDescGrid = ({ recipeMethod }) => {
-
-
-    console.log("inside Recipe Grid")
-    console.log(recipeMethod.fields.method.content[0])
-    //console.log(documentToHtmlString(recipeMethod.fields.method, options));
 
     return (
         <>
@@ -138,15 +106,6 @@ const RecipeDescGrid = ({ recipeMethod }) => {
                     <h4>Method</h4>
                 </GridItemMainCol>
                 <DivMainGridMethod>
-                    {/* {recipeMethod.fields.method.content.map(steps => {
-                        return (<DivMethod>
-                            {steps.content[0].value}
-                        </DivMethod>
-                        )
-                    })} */}
-
-                    {/* {documentToHtmlString(recipeMethod.fields.method, options)} */}
-
                     {recipeMethod.fields.recipeMethod && recipeMethod.fields.recipeMethod.map((method, index) => {
                         return (
                             <DivMethod key={index}>
