@@ -1,17 +1,71 @@
+import {
+    EmailIcon,
+    EmailShareButton,
+    FacebookShareButton,
+    FacebookIcon,
+    TelegramShareButton,
+    TelegramIcon,
+    TwitterShareButton,
+    TwitterIcon,
+    WhatsappShareButton,
+    WhatsappIcon
+} from "react-share";
+import styled from "styled-components";
+
+const DivShare = styled.div`
+padding-right:10px;
+display:flex;
+`;
+
+const DivShareInner = styled.div`
+display:inline-block;
+padding-right:10px;
+`;
+
 const ShareRecipe = () => {
     return (
         <>
-            <div class="shareBasic">
-                <div class="social">
-                    <a href="#" name="instagram" id="linkInsta">
-                        <i class="icon ion-social-instagram"></i></a><a href="#" name="snapchat"
-                            id="linkSnapchat"><i class="icon ion-social-snapchat"></i></a><a href="#"
-                                name="twitter" id="linkTwitter"><i class="icon ion-social-twitter"></i></a><a
-                                    href="#" name="facebook" id="linkFacebook"><i
-                                        class="icon ion-social-facebook"></i></a><label name="lblShareRecipe">Share
-                    </label>
-                </div>
-            </div>
+            <DivShare>
+                <DivShareInner>
+                    <EmailShareButton>
+                        <EmailIcon subject="Recipe" round size={36} ></EmailIcon>
+                    </EmailShareButton>
+
+                </DivShareInner>
+                <DivShareInner>
+                    <TwitterShareButton
+                        title={"test"}
+                        url={"https://peing.net/ja/"}
+                        hashtags={["hashtag1", "hashtag2"]}>
+                        <TwitterIcon size={36} round />
+                    </TwitterShareButton>
+                </DivShareInner>
+                <DivShareInner>
+                    <TelegramShareButton
+                        title={"test"}
+                        url={"https://peing.net/ja/"}
+                        hashtags={["hashtag1", "hashtag2"]}>
+                        <TelegramIcon size={36} round />
+                    </TelegramShareButton>
+                </DivShareInner>
+                <DivShareInner>
+                    <FacebookShareButton
+                        title={"test"}
+                        url={"https://peing.net/ja/"}
+                        hashtags={["hashtag1", "hashtag2"]}>
+                        <FacebookIcon size={36} round />
+                    </FacebookShareButton>
+                </DivShareInner>
+                <DivShareInner>
+                    <WhatsappShareButton
+                        title={"test"}
+                        url={"https://peing.net/ja/"}
+                        hashtags={["hashtag1", "hashtag2"]}>
+                        <WhatsappIcon size={36} round />
+                    </WhatsappShareButton>
+                </DivShareInner>
+
+            </DivShare>
         </>
     )
 }

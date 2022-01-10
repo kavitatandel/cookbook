@@ -85,7 +85,7 @@ letter-spacing: 5px;
 `;
 
 const H1RecipeName = styled.h1`
-font-size: 5rem;
+font-size: 4.25rem;
 padding-left: 0px;
 margin-left: 0px;
 text-align: left;
