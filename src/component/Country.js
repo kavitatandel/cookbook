@@ -62,6 +62,7 @@ export default function Country({ flag, CountryName }) {
   if (loading) return <h1>Page is loading</h1>
   if (error) return <h1>There is an error occured. Please try again later....</h1>
   return (
+
     <>
       <CountryComponent>
         <CountryHeader>
@@ -94,6 +95,7 @@ export default function Country({ flag, CountryName }) {
         </CountryMain>
       </CountryComponent>
     </>
+
   );
 }
 
