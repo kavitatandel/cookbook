@@ -33,6 +33,7 @@ const RecipeDesc = () => {
         fetchRecipeById();
     }, [])
 
+
     if (loading) return <h1>Page is loading</h1>
     if (error) return <h1>There is an error occured. Please try again later....</h1>
     return (
