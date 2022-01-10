@@ -7,9 +7,10 @@ const Card = (props) => {
       <CardDesign>
         <CardHeader>{props.foodType}</CardHeader>
         <CardContent>
+
           <CardImg src={props.image}  />
           
-          
+
           <CardH3>{props.title}</CardH3>
           <CardP> {props.description}</CardP>
           {/* <Link to={`/recipedesc/2j4ISUOZOxa7vDMYIP7Dhf`}><CardA>Go to recipe »</CardA></Link> */}

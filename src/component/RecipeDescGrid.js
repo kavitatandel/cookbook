@@ -38,18 +38,19 @@ text-align: left;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 1em;
 background-color: rgba(241, 201, 22, 0.5);
+font-weight:100;
 `;
 
 const TableIngredients = styled.table`
 width: 100%;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 1em;
-font-weight:normal;
+font-weight:100;
 `;
 
 const TdTableIngredients = styled.td`
 padding: 5px 30px 5px 0px;
-
+font-weight:100;
 `;
 
 const DivMainGridMethod = styled.div`
@@ -95,10 +96,13 @@ const options = {
 //     }
 // };
 
+
+
 const RecipeDescGrid = ({ recipeMethod }) => {
 
 
     console.log("inside Recipe Grid")
+    console.log(recipeMethod.fields.method.content[0])
     //console.log(documentToHtmlString(recipeMethod.fields.method, options));
 
     return (
@@ -134,12 +138,22 @@ const RecipeDescGrid = ({ recipeMethod }) => {
                     <h4>Method</h4>
                 </GridItemMainCol>
                 <DivMainGridMethod>
-                    {/* <div> */}
-                    <DivMethod>
-                        {documentToHtmlString(recipeMethod.fields.method)}
-                    </DivMethod>
+                    {/* {recipeMethod.fields.method.content.map(steps => {
+                        return (<DivMethod>
+                            {steps.content[0].value}
+                        </DivMethod>
+                        )
+                    })} */}
 
-                    {/* </div> */}
+                    {/* {documentToHtmlString(recipeMethod.fields.method, options)} */}
+
+                    {recipeMethod.fields.recipeMethod && recipeMethod.fields.recipeMethod.map((method, index) => {
+                        return (
+                            <DivMethod key={index}>
+                                {method.step}.  {method.value}
+                            </DivMethod>
+                        )
+                    })}
                 </DivMainGridMethod>
             </GridContainer>
         </>
