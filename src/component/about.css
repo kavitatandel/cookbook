@@ -6,8 +6,9 @@
     background-position: center;
     background-size: cover;
     color: white;
-    height: 600px;
+    height: 100vh;
     font-family: Raleway;
+    min-height: 600px;
 }
 
 .aboutMe h1 {
