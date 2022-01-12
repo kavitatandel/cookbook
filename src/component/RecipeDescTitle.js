@@ -6,7 +6,7 @@ import ShareRecipe from './ShareRecipe'
 import UKFlag from '../Images/UKFlag.png'
 import USAFlag from '../Images/USAFlag.png'
 import PolandFlag from '../Images/PolandFlag.png'
-
+import { useNavigate } from 'react-router';
 
 const DivTitle = styled.div`
 width: 80%;
@@ -14,7 +14,7 @@ width: auto;
 display: flex;
 align-items: center;
 justify-content: center;
-padding-bottom: 60px;
+padding-bottom: 50px;
 `;
 
 const DivImageRecipe = styled.div`
@@ -39,6 +39,7 @@ display: inline-block;
 const ImgCountryFlag = styled.img`
 width: 50px;
 height: 50px;
+border: 1px solid rgba(0,0,0, 0.1);
 `;
 
 // const TdCountryName = styled.td`
@@ -95,9 +96,24 @@ opacity:1;
 letter-spacing:5px;
 `;
 
+const DivBackbutton = styled.div`
+width: 100%;
+display: flex;
+padding-right: 10%;
+align-items: right;
+justify-content: right;
+padding-bottom: 30px;
+`;
+
+const ButtonBack = styled.button`
+padding: 10px;
+background-color:orange;
+font-weight:700;
+`;
+
 
 const RecipeDescTitle = ({ recipeInfo }) => {
-
+    const navigate = useNavigate();
     return (
         <>
             <DivTitle>
@@ -136,7 +152,9 @@ const RecipeDescTitle = ({ recipeInfo }) => {
                 <DivImageRecipe>
                     <ImageFood src={recipeInfo.fields.image.fields.file.url} alt={recipeInfo.fields.image.fields.title} />
                 </DivImageRecipe>
+
             </DivTitle>
+            <DivBackbutton><ButtonBack onClick={() => navigate(-1)}>Back to Country Recipes</ButtonBack></DivBackbutton>
         </>
     )
 }
