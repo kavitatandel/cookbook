@@ -7,6 +7,7 @@ import UKFlag from '../Images/UKFlag.png'
 import USAFlag from '../Images/USAFlag.png'
 import PolandFlag from '../Images/PolandFlag.png'
 import { useNavigate } from 'react-router';
+import { devices } from './Devices';
 
 const DivTitle = styled.div`
 width: 80%;
@@ -40,12 +41,9 @@ const ImgCountryFlag = styled.img`
 width: 50px;
 height: 50px;
 border: 1px solid rgba(0,0,0, 0.1);
+
 `;
 
-// const TdCountryName = styled.td`
-// display: inline-block;
-// text-align: left;
-// `;
 
 const H5CountryName = styled.h5`
 padding: 0px 0px;
@@ -65,8 +63,18 @@ text-align:left;
 `;
 
 const ImageFood = styled.img` 
-width: 450px;
+
+width: 250px;
+height: 150px;
+
+@media ${devices.tablet} {
+    display: flex;    
+    width: 450px;
 height: 310px;
+
+    }
+
+
 `;
 
 const H4RecipeType = styled.h4`
