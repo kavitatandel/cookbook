@@ -7,13 +7,13 @@ import UKFlag from '../Images/UKFlag.png'
 import USAFlag from '../Images/USAFlag.png'
 import PolandFlag from '../Images/PolandFlag.png'
 import { useNavigate } from 'react-router';
-import { devices } from './Devices';
+//import { devices } from './Devices';
 
 const DivTitle = styled.div`
 width: 80%;
 width: auto;
 display: flex;
-align-items: center;
+
 justify-content: center;
 padding-bottom: 50px;
 `;
@@ -38,10 +38,15 @@ display: inline-block;
 `;
 
 const ImgCountryFlag = styled.img`
-width: 50px;
-height: 50px;
+width: 27px;
+height: 27px;
 border: 1px solid rgba(0,0,0, 0.1);
 
+
+@media screen and (min-width:768px) {
+    width: 40px;
+    height: 40px;
+}
 `;
 
 
@@ -51,6 +56,11 @@ text-transform: uppercase;
 font-weight: 600;
 text-align:left;
 padding:15px 0px 0px 10px;
+
+font-size:0.65em;
+@media screen and (min-width:768px) {
+font-size:0.83em;
+}
 `;
 
 const TrCountryInfo = styled.tr`
@@ -63,18 +73,14 @@ text-align:left;
 `;
 
 const ImageFood = styled.img` 
+width: 230px;
+height: 220px;
 
-width: 250px;
-height: 150px;
-
-@media ${devices.tablet} {
-    display: flex;    
-    width: 450px;
+@media screen and (min-width:768px) {
+display: flex;    
+width: 450px;
 height: 310px;
-
-    }
-
-
+}
 `;
 
 const H4RecipeType = styled.h4`
@@ -85,6 +91,11 @@ text-transform: uppercase;
 letter-spacing: 3px;
 font-weight: 900;
 padding-top:10px;
+
+font-size:0.75em;
+@media screen and (min-width:768px) {
+font-size:1em;
+}
 `;
 
 const TdRecipeName = styled.td`
@@ -94,7 +105,7 @@ letter-spacing: 5px;
 `;
 
 const H1RecipeName = styled.h1`
-font-size: 4.25rem;
+font-size: 1.75rem;
 padding-left: 0px;
 margin-left: 0px;
 text-align: left;
@@ -102,12 +113,16 @@ margin-block-start: 0px;
 color:black;
 opacity:1;
 letter-spacing:5px;
+
+@media screen and (min-width:768px) {
+font-size: 4.25rem;
+}
 `;
 
 const DivBackbutton = styled.div`
 width: 100%;
 display: flex;
-padding-right: 10%;
+padding-right: 11%;
 align-items: right;
 justify-content: right;
 padding-bottom: 30px;
@@ -117,6 +132,22 @@ const ButtonBack = styled.button`
 padding: 10px;
 background-color:orange;
 font-weight:700;
+
+font-size:0.65em;
+@media screen and (min-width:768px){
+    font-size:1em;
+}
+`;
+
+const DivShareButton = styled.div`
+width: 100%;
+display: flex;
+padding-left: 10%;
+align-items: right;
+justify-content: right;
+padding-bottom: 30px;
+text-align:right;
+align-content:right;
 `;
 
 
@@ -150,11 +181,11 @@ const RecipeDescTitle = ({ recipeInfo }) => {
                                 <H1RecipeName>{recipeInfo.fields.title}</H1RecipeName>
                             </TdCountryInfo>
                         </TrCountryInfo>
-                        <TrCountryInfo>
+                        {/* <TrCountryInfo>
                             <TdCountryInfo>
                                 <ShareRecipe />
                             </TdCountryInfo>
-                        </TrCountryInfo>
+                        </TrCountryInfo> */}
                     </TableFlageAndTitle>
                 </DivTitleInner>
                 <DivImageRecipe>
@@ -162,7 +193,11 @@ const RecipeDescTitle = ({ recipeInfo }) => {
                 </DivImageRecipe>
 
             </DivTitle>
-            <DivBackbutton><ButtonBack onClick={() => navigate(-1)}>Back to Country Recipes</ButtonBack></DivBackbutton>
+            <DivShareButton >
+                <ShareRecipe />
+                <DivBackbutton><ButtonBack onClick={() => navigate(-1)}>Back to Country Recipes</ButtonBack></DivBackbutton>
+            </DivShareButton>
+            {/* <DivBackbutton><ButtonBack onClick={() => navigate(-1)}>Back to Country Recipes</ButtonBack></DivBackbutton> */}
         </>
     )
 }
