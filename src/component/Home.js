@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import IndiaFlag from './Images/IndiaFlag.png';
 import USAFlag from './Images/united-states.svg';
 import UKFlag from './Images/united-kingdom.svg';
-import PolandFlag from './Images/poland.svg';
-import BackgroundImage from './Images/home-background.png'
+import PolandFlag from './Images/poland3.jpg';
+import BackgroundImage from './Images/home-background.png';
+
+
+
 
 //background-image: url("Images/home-background.png");
 const Main = styled.main`
@@ -64,17 +67,23 @@ max-width: 1000px;
 
 const LinkHomeFlag = styled.a`
 width: 22%;
-color: white;
 text-align: center;
 font-family: "Raleway", sans-serif;
 font-size: 24px;
 font-weight: 400;
 color: white;
-  `;
-
-const Embed = styled.embed`
-border-radius: 50%;
+&:hover {
+  color: orange;
+  text-decoration: none;
+}
 `;
+
+  const Embed = styled.embed`
+  border-radius: 50%;
+  borderRadius: 50%;
+  width: 230px;
+  height: 160px; 
+  `;
 
 
 
@@ -87,14 +96,14 @@ const Home = () => {
           <Header>Discover the World of Spicy Food!</Header>
 
           <SubHeader>Select a country to get started:</SubHeader>
-          <DivHomeFlag>
-            <LinkHomeFlag href="#" > <Embed src={IndiaFlag} style={{ borderRadius: '50%', width: '230px', height: '160px' }} />India</LinkHomeFlag>
+          <DivHomeFlag >
+            <LinkHomeFlag href="/india" > <Embed src={IndiaFlag} style={{ borderRadius: '50%', width: '230px', height: '160px' }} />India</LinkHomeFlag>
 
-            <LinkHomeFlag href="#" > <Embed src={UKFlag} />UK</LinkHomeFlag>
+            <LinkHomeFlag href="/uk" > <Embed src={UKFlag} />UK</LinkHomeFlag>
 
-            <LinkHomeFlag href="#" > <Embed src={PolandFlag} />Poland</LinkHomeFlag>
+            <LinkHomeFlag href="/poland" > <Embed src={PolandFlag} />Poland</LinkHomeFlag>
 
-            <LinkHomeFlag href="#" > <Embed src={USAFlag} />USA</LinkHomeFlag>
+            <LinkHomeFlag href="/usa" > <Embed src={USAFlag} />USA</LinkHomeFlag>
           </DivHomeFlag>
         </Container>
       </Main>
