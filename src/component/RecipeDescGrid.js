@@ -77,10 +77,10 @@ const RecipeDescGrid = ({ recipeMethod }) => {
         <>
             <GridContainer>
                 <GridItemMainCol>
-                    <h4>Description</h4>
+                    <h4 >Description</h4>
                 </GridItemMainCol>
                 <GridItem>
-                    <p>{recipeMethod.fields.description}</p>
+                    <div>{recipeMethod.fields.description}</div>
                 </GridItem>
                 <GridItemMainCol>
                     <h4>Ingredients</h4>
