@@ -21,14 +21,11 @@ export default function Country({ flag, CountryName }) {
 
   const fetchData = async () => {
     try {
-      //await contentful.createClient.getEntries(`/spaces/${space_id}/environments/${environment_id}/content_types/${content_type_id}?access_token=${access_token}`).getEntries()
-      //await Client.getEntries(`/spaces/${space_id}/environments/${environment_id}/content_types/${content_type_id}?access_token=${access_token}`)
       await Client.getEntries({ content_type: 'cookbookproject' })
         .then((contentType) => {
           setAllData(contentType.items)
           console.log(contentType.items)
-          //console.log(contentType.items[4].fields.countryName[0])
-          // console.log(allData)
+
           setLoading(false);
         }
         )
@@ -43,20 +40,6 @@ export default function Country({ flag, CountryName }) {
   useEffect(() => {
     fetchData();
   }, [])
-
-  // console.log(allData[0].fields.countryName[0]);
-  //  allData.filter(e => (e.fields.title==='Roasted Squash with Thyme')).map(e => {console.log(e)})
-  //  const filtered=allData.filter(e => {
-  //    return e.fields.CountryName[0] === "UK"
-  //  }
-
-  //   );
-
-  //  console.log(filtered);
-
-  //console.log(allData[0].fields.countryName[0])
-
-  // console.log(CountryName)
 
 
   if (loading) return <h1>Page is loading</h1>
@@ -75,8 +58,6 @@ export default function Country({ flag, CountryName }) {
           {allData
             .filter(e => e.fields.countryName[0].toUpperCase() === newLocation.toUpperCase())
 
-            //.filter(e => e.fields.title === "Poha")
-
             .map(e => {
 
               return (
@@ -89,9 +70,6 @@ export default function Country({ flag, CountryName }) {
               )
             })}
 
-          {/* <Card foodType="starters"/>
-        <Card foodType="main" />
-        <Card foodType="dessert" /> */}
         </CountryMain>
       </CountryComponent>
     </>
