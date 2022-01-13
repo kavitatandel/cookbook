@@ -3,7 +3,8 @@ import Card from "./Card";
 import { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router';
 import { Client } from './Client';
-import * as contentful from 'contentful'
+import * as contentful from 'contentful';
+import {devices} from './Devices';
 
 export default function Country({ flag, CountryName }) {
 
@@ -107,11 +108,20 @@ const Flag = styled.img`
 `;
 
 const CountryMain = styled.section`
-  color: green;
+  padding: 30px;
+
+  @media ${devices.tablet} {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;
-  flex-direction: row;
+  
+  // flex-direction: row;
   justify-content: space-around;
-  padding: 30px;
+  }
+
+  
+  
 `;
+
+
+
