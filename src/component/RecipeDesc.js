@@ -6,6 +6,7 @@ import { useParams } from 'react-router';
 import { Client } from './Client'
 import { useState, useEffect } from 'react';
 import LoadingCircular from './LoadingCircular';
+import { devices } from './Devices';
 
 const DivMain = styled.div`
 width: 100%;
