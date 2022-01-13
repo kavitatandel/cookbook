@@ -91,13 +91,13 @@ const Home = () => {
 
           <SubHeader>Select a country to get started:</SubHeader>
           <DivHomeFlag>
-            <LinkHomeFlag href="#" > <Embed src={IndiaFlag} style={{ borderRadius: '50%', width: '230px', height: '160px' }} />India</LinkHomeFlag>
+            <LinkHomeFlag href="/india" > <Embed src={IndiaFlag} style={{ borderRadius: '50%', width: '230px', height: '160px' }} />India</LinkHomeFlag>
 
-            <LinkHomeFlag href="#" > <Embed src={UKFlag} />UK</LinkHomeFlag>
+            <LinkHomeFlag href="/uk" > <Embed src={UKFlag} />UK</LinkHomeFlag>
 
-            <LinkHomeFlag href="#" > <Embed src={PolandFlag} />Poland</LinkHomeFlag>
+            <LinkHomeFlag href="/poland" > <Embed src={PolandFlag} />Poland</LinkHomeFlag>
 
-            <LinkHomeFlag href="#" > <Embed src={USAFlag} />USA</LinkHomeFlag>
+            <LinkHomeFlag href="/usa" > <Embed src={USAFlag} />USA</LinkHomeFlag>
           </DivHomeFlag>
         </Container>
       </Main>
