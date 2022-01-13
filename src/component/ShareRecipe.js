@@ -12,6 +12,7 @@ import {
 } from "react-share";
 import styled from "styled-components";
 
+
 const DivShare = styled.div`
 padding-right:10px;
 display:flex;
@@ -27,15 +28,14 @@ const ShareRecipe = () => {
         <>
             <DivShare>
                 <DivShareInner>
-                    <EmailShareButton>
-                        <EmailIcon subject="Recipe" round size={36} ></EmailIcon>
+                    <EmailShareButton subject="New Recipe To Try" url={"https://test.com/test1/"}>
+                        <EmailIcon round size={36} ></EmailIcon>
                     </EmailShareButton>
-
                 </DivShareInner>
                 <DivShareInner>
                     <TwitterShareButton
                         title={"test"}
-                        url={"https://peing.net/ja/"}
+                        url={"https://test.com/test1/"}
                         hashtags={["hashtag1", "hashtag2"]}>
                         <TwitterIcon size={36} round />
                     </TwitterShareButton>
@@ -43,7 +43,7 @@ const ShareRecipe = () => {
                 <DivShareInner>
                     <TelegramShareButton
                         title={"test"}
-                        url={"https://peing.net/ja/"}
+                        url={"https://test.com/test1/"}
                         hashtags={["hashtag1", "hashtag2"]}>
                         <TelegramIcon size={36} round />
                     </TelegramShareButton>
@@ -51,7 +51,7 @@ const ShareRecipe = () => {
                 <DivShareInner>
                     <FacebookShareButton
                         title={"test"}
-                        url={"https://peing.net/ja/"}
+                        url={"https://test.com/test1/"}
                         hashtags={["hashtag1", "hashtag2"]}>
                         <FacebookIcon size={36} round />
                     </FacebookShareButton>
@@ -59,7 +59,7 @@ const ShareRecipe = () => {
                 <DivShareInner>
                     <WhatsappShareButton
                         title={"test"}
-                        url={"https://peing.net/ja/"}
+                        url={"https://test.com/test1/"}
                         hashtags={["hashtag1", "hashtag2"]}>
                         <WhatsappIcon size={36} round />
                     </WhatsappShareButton>
