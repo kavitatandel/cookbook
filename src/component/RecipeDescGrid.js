@@ -26,6 +26,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 1em;
 `;
 
+
 const GridItemMainCol = styled.div`
 width: 100%;
 background-color: white;
@@ -37,7 +38,18 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 1em;
 background-color: rgba(241, 201, 22, 0.5);
 font-weight:100;
+
+
 `;
+
+const H4GridMainTitle = styled.h4`
+font-size:1em;
+
+@media screen and (min-width:768px){
+    font-size: 1.5em;
+}
+`;
+//early font-size normal screen - 1em
 
 const TableIngredients = styled.table`
 width: 100%;
@@ -77,13 +89,13 @@ const RecipeDescGrid = ({ recipeMethod }) => {
         <>
             <GridContainer>
                 <GridItemMainCol>
-                    <h4 >Description</h4>
+                    <H4GridMainTitle>Description</H4GridMainTitle>
                 </GridItemMainCol>
                 <GridItem>
                     <div>{recipeMethod.fields.description}</div>
                 </GridItem>
                 <GridItemMainCol>
-                    <h4>Ingredients</h4>
+                    <H4GridMainTitle>Ingredients</H4GridMainTitle>
                 </GridItemMainCol>
                 <GridItem>
                     {/* <div> */}
@@ -103,7 +115,7 @@ const RecipeDescGrid = ({ recipeMethod }) => {
                     {/* </div> */}
                 </GridItem>
                 <GridItemMainCol>
-                    <h4>Method</h4>
+                    <H4GridMainTitle>Method</H4GridMainTitle>
                 </GridItemMainCol>
                 <DivMainGridMethod>
                     {recipeMethod.fields.recipeMethod && recipeMethod.fields.recipeMethod.map((method, index) => {
