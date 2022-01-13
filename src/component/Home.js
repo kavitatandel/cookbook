@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import IndiaFlag from './Images/IndiaFlag.png';
 import USAFlag from './Images/united-states.svg';
 import UKFlag from './Images/united-kingdom.svg';
-import PolandFlag from './Images/poland.svg';
+import PolandFlag from './Images/poland3.jpg';
 import BackgroundImage from './Images/home-background.png'
 
 //background-image: url("Images/home-background.png");
@@ -72,9 +72,12 @@ font-weight: 400;
 color: white;
   `;
 
-const Embed = styled.embed`
-border-radius: 50%;
-`;
+  const Embed = styled.embed`
+  border-radius: 50%;
+  borderRadius: 50%;
+  width: 230px;
+  height: 160px; 
+  `;
 
 
 
