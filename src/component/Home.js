@@ -11,15 +11,16 @@ import BackgroundImage from './Images/home-background.png';
 //background-image: url("Images/home-background.png");
 const Main = styled.main`
 display:flex;
-background-size: cover;
+background-size: contain;
 width: 100%;
+height: 100%;
 background-position: center;
-background-repeat: no-repeat;
-min-height:300px;
+min-height:1000px;
+background-color: black;
 
 @media screen and (min-width:768px) {
   background-size: cover;
-  min-height:600px;
+  min-height:1100px;
   width: 100%;
 
   }
@@ -35,17 +36,17 @@ margin-left: auto;
 margin-right: auto;
 color: white;
 font-weight: 600;
-margin-top: 370px;
+margin-top: 70px;
 
 @media screen and (min-width:768px) {
   font-size: 40px;
-  margin-top: 370px;
+  margin-top: 170px;
   vertical-align:middle;
   }
 
 @media screen and (min-width:950px) {
 font-size: 50px;
-margin-top: 45px;
+margin-top: 105px;
 vertical-align:middle;
 }
 
@@ -76,17 +77,18 @@ const Container = styled.div`
 display:flex;
 background-size: cover;
 width: 100%;
-height: 110vh;
+height: 120vh;
 background-position: center;
-background-repeat: no-repeat;
+background-repeat: repeat-y;
+background-color: black;
 display: flex;
 flex-direction: column;
 align-items: center;
-min-height:600px;
-justify-content:center;
+justify-content:flex-start;
+
 @media screen and (min-width:950px) {
   height: 100vh;
-
+  min-height:550px;
 }
 `;
 
@@ -96,7 +98,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 
 @media screen and (min-width:950px) {
   display: flex;
@@ -153,7 +155,7 @@ const Home = () => {
   return (
     <>
       <Main >
-        <Container style={{ backgroundImage: `url(${BackgroundImage})` }}>
+        <Container style={{ backgroundImage: `url(${BackgroundImage})`, backgroundRepeat: 'repeat-y' }}>
 
           <Header>Discover the World of Spicy Food!</Header>
 
