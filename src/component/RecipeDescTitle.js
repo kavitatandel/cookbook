@@ -20,9 +20,9 @@ padding-bottom: 50px;
 
 const DivImageRecipe = styled.div`
 display: inline-block;
-width: auto;
 vertical-align: middle;
 margin-right: 10%;
+margin-left: 10%;
 `;
 
 const DivTitleInner = styled.div`
@@ -74,12 +74,12 @@ text-align:left;
 
 const ImageFood = styled.img` 
 width: 230px;
-height: 220px;
+height: auto;
 
 @media screen and (min-width:768px) {
 display: flex;    
 width: 450px;
-height: 310px;
+height: auto;
 }
 `;
 
