@@ -9,24 +9,23 @@ import BackgroundImage from './Images/home-background.png';
 
 
 //background-image: url("Images/home-background.png");
+//min-height:1000px;
 const Main = styled.main`
 display:flex;
 background-size: contain;
 width: 100%;
 height: 100%;
 background-position: center;
-min-height:1000px;
+
 background-color: black;
 
 @media screen and (min-width:768px) {
   background-size: cover;
-  min-height:1100px;
+  min-height:600px;
   width: 100%;
-
   }
-
-
 `;
+//min-height:1100px;
 
 const Header = styled.h1`
 font-family: "Raleway", sans-serif;
@@ -89,9 +88,10 @@ justify-content:flex-start;
 
 @media screen and (min-width:950px) {
   height: 100vh;
-  min-height:550px;
+  min-height:800px;
 }
 `;
+//min-height:1200px;
 //height: 120vh;
 
 const DivHomeFlag = styled.div`
