@@ -64,6 +64,7 @@ text-align: center;
 font-size: 22px;
 font-weight: 400;
 color: white;
+padding-bottom:40px;
 
 @media screen and (min-width:950px) {
   font-size: 32px;
@@ -77,7 +78,7 @@ const Container = styled.div`
 display:flex;
 background-size: cover;
 width: 100%;
-height: 120vh;
+
 background-position: center;
 background-repeat: repeat-y;
 background-color: black;
@@ -91,14 +92,15 @@ justify-content:flex-start;
   min-height:550px;
 }
 `;
-
+//height: 120vh;
 
 const DivHomeFlag = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-  margin-bottom: 100px;
+margin-bottom: 100px;
+
 
 @media screen and (min-width:950px) {
   display: flex;
@@ -127,6 +129,9 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+padding-bottom:50px;
+
 @media screen and (min-width:768px) {
 }
 
@@ -136,19 +141,60 @@ align-items: center;
 }
 `;
 
-  const Embed = styled.embed`
+// width: 140px;
+// height: 100px; 
+const Embed = styled.embed`
   border-radius: 50%;
   borderRadius: 50%;
-  width: 230px;
-  height: 160px; 
+  width: 140px;
+  height: 100px; 
+ 
 
   @media screen and (min-width:768px) {
-    width: 230px;
+  width: 230px;
   height: 160px; 
+  }
+
+  @media screen and (min-width:950px) {
+    width: 200px;
+    height: 140px;
   }
 
   `;
 
+// @media screen and (min-width:1007) {
+//   width: 170px;
+//   height: 130px; 
+//   }
+
+
+const EmbedIndia = styled.embed`
+  border-radius: 50%;
+  borderRadius: 50%;
+  width: 140px;
+  height: 100px; 
+
+  @media screen and (min-width:768px) {
+  width: 230px;
+  height: 160px; 
+  }
+
+  @media screen and (min-width:950px) {
+    width: 200px;
+    height: 140px; 
+    
+  }
+
+  `;
+
+
+// const styleObject={
+// EmbedIndia:{
+//       width: '150px',
+//       height: '120px' 
+
+//     }
+//   }
 
 
 const Home = () => {
@@ -159,9 +205,9 @@ const Home = () => {
 
           <Header>Discover the World of Spicy Food!</Header>
 
-          <SubHeader>Select a country to get started:</SubHeader>
+          <SubHeader>Select a country to get started</SubHeader>
           <DivHomeFlag >
-            <LinkHomeFlag href="/india" > <Embed src={IndiaFlag} style={{ borderRadius: '50%', width: '230px', height: '160px' }} />India</LinkHomeFlag>
+            <LinkHomeFlag href="/india" > <EmbedIndia src={IndiaFlag} className="EmbedIndia" />India</LinkHomeFlag>
 
             <LinkHomeFlag href="/uk" > <Embed src={UKFlag} />UK</LinkHomeFlag>
 
